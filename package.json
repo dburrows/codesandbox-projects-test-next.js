@@ -8,6 +8,19 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@capsizecss/metrics": "^0.2.0",
+    "@ceteio/chakra-capsize": "^1.2.0",
+    "@chakra-ui/react": "^1.8.8",
+    "@emotion/react": "^11.9.0",
+    "@emotion/styled": "^11.8.1",
+    "@fontsource/libre-baskerville": "^4.5.8",
+    "@fontsource/literata": "^4.5.8",
+    "@fontsource/open-sans": "^4.5.8",
+    "@fontsource/pt-serif": "^4.5.8",
+    "@fontsource/raleway": "^4.5.8",
+    "@mdx-js/loader": "^2.1.1",
+    "@next/mdx": "^12.1.4",
+    "framer-motion": "^6.3.3",
     "next": "12.0.9",
     "react": "17.0.2",
     "react-dom": "17.0.2"
