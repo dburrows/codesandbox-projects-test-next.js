@@ -3,6 +3,26 @@ import Head from "next/head";
 import Image from "next/image";
 import { Button, Box, Grid, GridItem } from "@chakra-ui/react";
 import { CappedText, CappedHeading } from "@ceteio/chakra-capsize";
+import { WarningIcon } from "@chakra-ui/icons";
+
+const foo = `Call me Ishmael. Some years ago—never mind how long
+precisely—having little or no money in my purse, and nothing
+particular to interest me on shore, I thought I would sail about
+a little and see the watery part of the world. It is a way I
+have of driving off the spleen and regulating the circulation.
+Whenever I find myself growing grim about the mouth; whenever it
+is a damp, drizzly November in my soul; whenever I find myself
+involuntarily pausing before coffin warehouses, and bringing up
+the rear of every funeral I meet; and especially whenever my
+hypos get such an upper hand of me, that it requires a strong
+moral principle to prevent me from deliberately stepping into
+the street, and methodically knocking people’s hats off—then, I
+account it high time to get to sea as soon as I can. This is my
+substitute for pistol and ball. With a philosophical flourish
+Cato throws himself upon his sword; I quietly take to the ship.
+There is nothing surprising in this. If they but knew it, almost
+all men in their degree, some time or other, cherish very nearly
+the same feelings towards the ocean with me.`
 
 const Home: NextPage = () => {
   return (
@@ -16,27 +36,16 @@ const Home: NextPage = () => {
       <Box as="main" padding="8">
         <Grid padding="4" templateColumns="auto auto" gap="6">
           <GridItem>
-            <Box>
-              <CappedHeading fontSize="lg">Moby Dick</CappedHeading>
-              <CappedText fontSize="lg" lineGap={3} py={4}>
-                Call me Ishmael. Some years ago—never mind how long
-                precisely—having little or no money in my purse, and nothing
-                particular to interest me on shore, I thought I would sail about
-                a little and see the watery part of the world. It is a way I
-                have of driving off the spleen and regulating the circulation.
-                Whenever I find myself growing grim about the mouth; whenever it
-                is a damp, drizzly November in my soul; whenever I find myself
-                involuntarily pausing before coffin warehouses, and bringing up
-                the rear of every funeral I meet; and especially whenever my
-                hypos get such an upper hand of me, that it requires a strong
-                moral principle to prevent me from deliberately stepping into
-                the street, and methodically knocking people’s hats off—then, I
-                account it high time to get to sea as soon as I can. This is my
-                substitute for pistol and ball. With a philosophical flourish
-                Cato throws himself upon his sword; I quietly take to the ship.
-                There is nothing surprising in this. If they but knew it, almost
-                all men in their degree, some time or other, cherish very nearly
-                the same feelings towards the ocean with me.
+            <Box py="10">
+              <CappedHeading fontSize="lg">
+                Moby Dick - Merriweather
+              </CappedHeading>
+              <CappedText
+                fontSize="17px"
+                lineGap={4}
+                py={4}
+              >
+                { foo }
               </CappedText>
               <CappedText>
                 <em>Herman Melville, 1851</em>
@@ -44,7 +53,9 @@ const Home: NextPage = () => {
             </Box>
           </GridItem>
           <GridItem>
-            <Button colorScheme="teal">Click Me!</Button>
+            <Button colorScheme="teal" leftIcon={<WarningIcon />}>
+              Click Me!
+            </Button>
           </GridItem>
         </Grid>
       </Box>
